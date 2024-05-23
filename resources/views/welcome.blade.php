@@ -11,5 +11,8 @@
 <body>
 
 <livewire:partials.header/>
+
+{{-- <livewire:partials.search-filter/> --}}
+
 </body>
 </html>
