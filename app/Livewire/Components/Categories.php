@@ -8,19 +8,15 @@ use Livewire\WithPagination;
 
 class Categories extends Component
 {
-    public $name;
     public $categoryNames;
-    public $setPage;
-
-    use WithPagination;
-
+    
+    public function mount()
+    {
+        $this->categoryNames = Category::all();
+    }
 
     public function render()
     {
-
-        return view('livewire.components.categories', [
-            'categories' => Category::paginate(15),
-        ]);
-        
+        return view('livewire.components.categories');
     }
 }

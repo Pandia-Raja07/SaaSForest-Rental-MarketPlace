@@ -69,7 +69,6 @@
                         </svg>
                     </div>
 
-                    <!-- Dropdown menu -->
                     <div x-show="open" @click.away="open = false"
                         class="absolute top-full mt-2 w-40 bg-white border border-gray-300 rounded-lg shadow-lg text-sm">
                         <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Sign Up</a>
@@ -129,14 +128,14 @@
                     </div>
                 </div>
                 <div
-                    class=" border-r border-black h-[20px]  block max-w-0 group-hover:max-w-full transition-all duration-500  bg-sky-600  ">
+                    class=" border-r border-black h-[20px]   block max-w-0 group-hover:max-w-full transition-all duration-500  bg-sky-600  ">
                 </div>
-                {{-- x-data="{ setBook: false }" --}}
-                <div class="relative"
-                    class="w-36 check-in px-6 py-3 cursor-pointer transition duration-250 ease-in-out hover:bg-gray-100 rounded-full">
 
-                    <div @click="setBook = !setBook" class="mb-1">Check in</div>
-                    <input type="text" placeholder="Add dates" class="w-full bg-transparent ">
+                <div class="relative"
+                    class="w-36 check-in px-10 py-3 cursor-pointer transition duration-250 ease-in-out hover:bg-gray-100 rounded-full">
+
+                    <div @click="setBook = !setBook" class="mb-1 ml-5">Check in</div>
+                    <input type="text" placeholder="Add dates" class="w-full bg-transparent ml-5 ">
 
 
 
@@ -157,15 +156,6 @@
                     <input type="text" placeholder="Add Guests"
                         class="w-full bg-transparent border-none focus:outline-none">
                 </div>
-                {{-- <div class="w-10 check-out px-2 py-3 cursor-pointer transition duration-250 ease-in-out hover:bg-gray-100 rounded-full text-center flex flex-col items-center justify-center">
-                    <div class="flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
-                        <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
-                    </svg>
-
-
-                </div>
-                </div> --}}
 
                 <div
                     class="w-12 h-12 check-out cursor-pointer transition duration-250 ease-in-out hover:bg-gray-100 rounded-full text-center flex items-center justify-center bg-rose-500">
@@ -196,7 +186,7 @@
                         <div class=" p-2 px-5 ">
                             <div class="flex justify-center items-center gap-x-10">
                                 <div>
-                                    <p :class="{ 'text-blue-700': currentTab === 'fromDate' }" {{-- @click="currentTab = 'fromDate'; fromDate = !fromDate; setFromToDate = false;  month = false " --}}
+                                    <p :class="{ 'text-blue-700': currentTab === 'fromDate' }"
                                         @click="currentTab = 'fromDate'; fromDate = !fromDate; "
                                         class="cursor-pointer">
                                         Dates
@@ -212,14 +202,14 @@
                                 </div>
                                 <div>
                                     <p :class="{ 'text-blue-700': currentTab === 'flexibleTime' }"
-                                        {{-- <p :class ="{'text-red-700' : currentTab ===  'flexibleTime'  }" --}} @click="currentTab = 'flexibleTime'; fromDate = false;"
+                                        @click="currentTab = 'flexibleTime'; fromDate = false;"
                                         class="cursor-pointer">Flexible</p>
                                 </div>
                             </div>
 
                             <div class="w-full mt-5">
                                 <div x-show="fromDate" class="mt-2">
-                                    {{-- <input type="date" id="birthday" name="birthday"> --}}
+
 
                                     <div class="relative max-w-sm">
                                         <div
@@ -231,8 +221,8 @@
                                                     d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                             </svg>
                                         </div>
-                                        {{-- <p>calende Dates From Date </p>
-   <p>calende To  Date </p> --}}
+
+
                                         <div class="relative max-w-sm mx-auto p-4" x-data="datepickerRange()">
                                             <div class="flex items-center space-x-2">
                                                 <div class="relative flex-grow">
@@ -264,26 +254,13 @@
                                                         placeholder="End Date">
                                                 </div>
                                             </div>
-                                            {{-- <div class="mt-4">
-                                                    <button
-                                                        class="btn btn-secondary bg-gray-500 text-white py-1 px-3 rounded"
-                                                        @click="showDates">Month</button>
-                                                </div> --}}
+
                                         </div>
 
                                     </div>
 
                                 </div>
-                                {{-- <div class="mt-2 bg-red-400">
-                                        <p :class="{ 'text-blue-700': currentTab === 'month' }"
-                                        @click="currentTab = 'month'; fromDate = false; setFromToDate = false;">
-                                            Months
-                                        </p>
 
-
-
-                                    </div>
-                                </div> --}}
                             </div>
                         </div>
 
@@ -308,9 +285,7 @@
                                 <input type="text" placeholder="Add dates"
                                     class="w-full bg-transparent border-none focus:outline-none">
 
-                            </div>
-                            {{-- <div class=" border-r border-black h-[20px]"></div> --}}
-
+                            </div>I
                             <div
                                 class="w-36 check-out px-6 py-3 cursor-pointer transition duration-250 ease-in-out hover:bg-gray-100 rounded-full">
                                 <p class="mb-1"></p>
@@ -326,19 +301,7 @@
                                     class="w-full bg-transparent border-none focus:outline-none">
                             </div>
                         </div>
-
-                    </div>
-
-
-                    <div>
-
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
         </div>

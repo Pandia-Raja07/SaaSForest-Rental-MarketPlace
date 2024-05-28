@@ -1,8 +1,4 @@
 
-
-
-
-
 <div class="container mx-auto px-5 py-4 flex justify-center">
     <div class="inline-flex items-center  rounded-full p-4 gap-x-5 w-auto 	shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
         <div class="flex flex-col items-start space-y-1">

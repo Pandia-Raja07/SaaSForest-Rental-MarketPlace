@@ -18,13 +18,10 @@
 <body>
     <div>
         <livewire:partials.header />
-
         <div class="flex  overflow-x-auto categoryDetail">
+            <livewire:components.categories />
+
         </div>
-
-        <livewire:components.categories />
-
-
     </div>
 </body>
 
