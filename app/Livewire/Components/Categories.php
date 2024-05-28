@@ -8,11 +8,11 @@ use Livewire\WithPagination;
 
 class Categories extends Component
 {
-    public $categoryNames;
-    
+    public $categories;
+
     public function mount()
     {
-        $this->categoryNames = Category::all();
+        $this->categories = Category::all();
     }
 
     public function render()

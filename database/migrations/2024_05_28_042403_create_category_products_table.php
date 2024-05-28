@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('category_products', function (Blueprint $table) {
             $table->id();
             $table->unSignedBigInteger('category_id') ;
-            $table->unsignedBigInteger('product_rent_id');
+            $table->unsignedBigInteger('room_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade') ;
-            $table->foreign('product_rent_id')->references('id')->on('product_rents')->onDelete('cascade');
+            $table->foreign('room_id')->references('id')->on('rooms')->onDelete('cascade');
             $table->timestamps();
         });
     }

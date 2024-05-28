@@ -23,12 +23,10 @@ class CategorySeeder extends Seeder
             $categories[] = [
                 'name' => $faker->word,
                 'icon' => $faker->randomElement(['icon1.png', 'icon2.png', 'icon3.png']), // Replace with your icon paths
-                'created_at' => now(),
-                'updated_at' => now(),
             ];
         }
 
-        // Insert the categories into the database
+        // Bulk insert use Insert the categories into the database
         DB::table('categories')->insert($categories);
     }
 }
